@@ -1,10 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage BackgroundColor="Black" xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage BackgroundColor="Black" 
+              xmlns:ic ="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              xmlns:local="clr-namespace:HellowWolrd.MarkupExtensions"
              x:Class="HellowWolrd.ImagePage">
-    <Image Source="{local:EmbeddedImage HellowWolrd.images.background.jpg}" x:Name="image" Aspect="AspectFill"/>
+
+    <ic:CircleImage
+        WidthRequest="100"
+        HeightRequest="100"
+        Aspect="AspectFill"
+       Source="{local:EmbeddedImage HellowWolrd.images.background.jpg}" x:Name="image"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        />
 </ContentPage>
